@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="FinalProjectGroup7D.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:FinalProjectGroup7D"
+    Shell.FlyoutBehavior="Disabled">
+
+    
+
+    <TabBar>
+        <!--
+            DataTemplate local:MainPage
+            ^this is what actually changes the tab page to display the xaml
+        -->
+        <ShellContent
+        Title="Overview"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+        
+        
+        <!--
+        <ShellContent
+        Title="Overview"
+        ContentTemplate="{DataTemplate local:Overview}"
+        Route="Overview" />
+        -->
+        
+
+        <ShellContent
+        Title="Utilities"
+        ContentTemplate="{DataTemplate local:Utilities}"
+        Route="Utilities" />
+
+        <ShellContent
+        Title="Add Utilities"
+        ContentTemplate="{DataTemplate local:UtiltiesAdd}"
+        Route="UtiltiesAdd" />
+
+
+    </TabBar>
+
+
+</Shell>
