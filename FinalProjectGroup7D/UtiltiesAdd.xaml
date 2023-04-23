@@ -4,25 +4,36 @@
              x:Class="FinalProjectGroup7D.UtiltiesAdd"
              Title="UtiltiesAdd">
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="0.25*" />
-            <RowDefinition Height="100" />
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="1*"/>
-        </Grid.ColumnDefinitions>
-        
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        
-        <Entry Grid.Row="1" Grid.Column="0" HeightRequest="50"/>
-        <Button Grid.Row="2" Grid.Column="0" Text="Pog" />
-
-    </Grid>
     
+    <ScrollView>
+
+
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Entry Text="Type here to add new utility" HeightRequest="50" WidthRequest="200" Margin="10" PlaceholderColor="White" Placeholder="LAadvde nndeewr TPoiwknachu" BackgroundColor="Transparent" />
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Hello, World!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Welcome to .NET Multi-platform App UI"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
     
 </ContentPage>
