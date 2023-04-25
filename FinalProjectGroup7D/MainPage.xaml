@@ -4,10 +4,36 @@
              x:Class="FinalProjectGroup7D.MainPage">
 
     <ScrollView>
+        
+        
         <VerticalStackLayout
             Spacing="25"
             Padding="30,0"
             VerticalOptions="Center">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <!-- Top-left cell -->
+                <BoxView Grid.Row="0" Grid.Column="0" BackgroundColor="Red" />
+
+                <!-- Top-right cell -->
+                <BoxView Grid.Row="0" Grid.Column="1" BackgroundColor="Blue" />
+
+                <!-- Bottom-left cell -->
+                <BoxView Grid.Row="1" Grid.Column="0" BackgroundColor="Green" />
+
+                <!-- Bottom-right cell -->
+                <BoxView Grid.Row="1" Grid.Column="1" BackgroundColor="Yellow" />
+            </Grid>
+
+            <Entry Text="Hello, World!" HeightRequest="50" WidthRequest="200" Margin="10" PlaceholderColor="Gray" Placeholder="Type something here..." BackgroundColor="Transparent" />
 
             <Image
                 Source="dotnet_bot.png"
