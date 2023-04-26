@@ -1,6 +1,5 @@
 //using CloudKit;
 using FinalProjectGroup7D.Database;
-using FinalProjectGroup7D.Resources.Database;
 using FinalProjectGroup7D.Tables;
 using Microsoft.Maui.Controls;
 using MySqlConnector;
