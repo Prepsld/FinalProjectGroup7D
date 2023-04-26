@@ -2,6 +2,10 @@ using MySqlConnector;
 using System.Xml.Linq;
 using static System.Net.Mime.MediaTypeNames;
 
+//Created by Dave Prepsl, Jin Her, Markus Luthi
+//On April 22th, 2023
+//For OOP2 Final Project
+
 namespace FinalProjectGroup7D;
 
 public partial class UtiltiesAdd : ContentPage
@@ -38,12 +42,12 @@ public partial class UtiltiesAdd : ContentPage
                     {
 
                         int utilityNumber = reader.GetInt32("utility_#");
-                        int utilitytype = reader.GetInt32("type");
+                        string utilityname = reader.GetString("name");
                         double utilityrate = reader.GetDouble("rate");
 
-                        utilityNumberLabel.Text = utilityNumber.ToString();
-                        typeLabel.Text = utilitytype.ToString();
-                        rateLabel.Text = utilityrate.ToString();
+                        utilityNumberLabel.Text += utilityNumber.ToString() + Environment.NewLine;
+                        typeLabel.Text += utilityname + Environment.NewLine;
+                        rateLabel.Text += utilityrate.ToString() + Environment.NewLine;
                     }
                 }
             }

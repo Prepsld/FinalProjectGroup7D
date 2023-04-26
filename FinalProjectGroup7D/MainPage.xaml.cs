@@ -3,8 +3,8 @@ using FinalProjectGroup7D.Tables;
 using Microsoft.Maui.Controls;
 using MySqlConnector;
 
-//Create by Markus Luthi
-//On April 25th, 2023
+//Created by Dave Prepsl, Jin Her, Markus Luthi
+//On April 22th, 2023
 //For OOP2 Final Project
 
 namespace FinalProjectGroup7D;
