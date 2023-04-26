@@ -32,12 +32,12 @@ namespace FinalProjectGroup7D.Database
         private void Initialize()
         {
             server = "localhost";
-            database = "connectcsharptomysql";
+            database = "oopfinal";
             uid = "root";
             password = "password";
             string connectionString;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-            database + "oopfinal;" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
+            database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
 
             connection = new MySqlConnection(connectionString);
         }
@@ -299,9 +299,7 @@ namespace FinalProjectGroup7D.Database
                     Tables.Utility x = new Tables.Utility(
                         dataReader.GetInt32(0),
                         dataReader.GetInt32(1),
-                        dataReader.GetFloat(2),
-                        dataReader.GetString(3),
-                        dataReader.GetString(4));
+                        dataReader.GetFloat(2));
 
                     utilityList.Add(x);
                 }
