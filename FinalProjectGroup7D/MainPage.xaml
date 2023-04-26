@@ -6,7 +6,8 @@ For OOP2 Final Project-->
     
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FinalProjectGroup7D.MainPage">
+             x:Class="FinalProjectGroup7D.MainPage"
+             BackgroundColor = "DeepSkyBlue">
 
 
     <Grid>
