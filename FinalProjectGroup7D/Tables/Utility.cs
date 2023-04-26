@@ -12,7 +12,7 @@ namespace FinalProjectGroup7D.Tables
     public class Utility
     {
         public int UtilityNum { get; set; }
-        public int Type { get; set; }
+        public string Type { get; set; }
         public float Rate { get; set; }
 
         public Utility()
@@ -20,7 +20,7 @@ namespace FinalProjectGroup7D.Tables
 
         }
 
-        public Utility(int utilityNum, int type, float rate)
+        public Utility(int utilityNum, string type, float rate)
         {
             UtilityNum = utilityNum;
             Type = type;

@@ -298,7 +298,7 @@ namespace FinalProjectGroup7D.Database
                 {
                     Tables.Utility x = new Tables.Utility(
                         dataReader.GetInt32(0),
-                        dataReader.GetInt32(1),
+                        dataReader.GetString(1),
                         dataReader.GetFloat(2));
 
                     utilityList.Add(x);
