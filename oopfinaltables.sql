@@ -39,14 +39,14 @@ DELETE FROM `history`;
 /*!40000 ALTER TABLE `history` DISABLE KEYS */;
 INSERT INTO `history` (`utility_#`, `address_#`, `usage`, `start`, `end`) VALUES
 	(1, 1, 192.35, '2022-03-04', '2022-11-27'),
-	(2, 2, 516.75, '2021-05-31', '2022-04-26'),
-	(3, 3, 547.98, '2022-02-23', '2023-01-07'),
-	(4, 1, 288.43, '2021-07-18', '2022-07-13'),
-	(5, 2, 220.31, '2022-01-08', '2022-06-14'),
-	(6, 3, 736.16, '2022-03-22', '2023-02-25'),
-	(7, 1, 165.48, '2021-06-21', '2022-05-24'),
-	(8, 2, 256.62, '2021-08-26', '2023-03-09'),
-	(9, 3, 7.94, '2021-06-17', '2022-05-21');
+	(1, 2, 516.75, '2021-05-31', '2022-04-26'),
+	(1, 3, 547.98, '2022-02-23', '2023-01-07'),
+	(2, 1, 288.43, '2021-07-18', '2022-07-13'),
+	(2, 2, 220.31, '2022-01-08', '2022-06-14'),
+	(2, 3, 736.16, '2022-03-22', '2023-02-25'),
+	(3, 1, 165.48, '2021-06-21', '2022-05-24'),
+	(3, 2, 256.62, '2021-08-26', '2023-03-09'),
+	(3, 3, 7.94, '2021-06-17', '2022-05-21');
 /*!40000 ALTER TABLE `history` ENABLE KEYS */;
 
 -- Dumping structure for table oopfinal.location
@@ -94,25 +94,18 @@ INSERT INTO `user` (`account_#`, `first_name`, `last_name`, `mailing_address`, `
 DROP TABLE IF EXISTS `utility`;
 CREATE TABLE IF NOT EXISTS `utility` (
   `utility_#` int(11) NOT NULL,
-  `type` int(1) NOT NULL,
+  `name` varchar(50) NOT NULL DEFAULT '',
   `rate` float(5,4) NOT NULL DEFAULT 0.0000,
-  PRIMARY KEY (`utility_#`) USING BTREE,
-  CONSTRAINT `CC1` CHECK (`type` = 1 or 2 or 3)
+  PRIMARY KEY (`utility_#`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
--- Dumping data for table oopfinal.utility: ~9 rows (approximately)
+-- Dumping data for table oopfinal.utility: ~3 rows (approximately)
 DELETE FROM `utility`;
 /*!40000 ALTER TABLE `utility` DISABLE KEYS */;
-INSERT INTO `utility` (`utility_#`, `type`, `rate`) VALUES
-	(1, 1, 1.2706),
-	(2, 1, 5.9952),
-	(3, 1, 1.1516),
-	(4, 2, 2.6255),
-	(5, 2, 5.6204),
-	(6, 2, 5.7566),
-	(7, 3, 5.2280),
-	(8, 3, 5.6528),
-	(9, 3, 2.4916);
+INSERT INTO `utility` (`utility_#`, `name`, `rate`) VALUES
+	(1, 'Gas', 1.2706),
+	(2, 'Electricity', 5.9952),
+	(3, 'Plumbing', 1.1516);
 /*!40000 ALTER TABLE `utility` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
