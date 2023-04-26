@@ -12,23 +12,19 @@ namespace FinalProjectGroup7D.Tables
     public class Utility
     {
         public int UtilityNum { get; set; }
-        public int AddressNum { get; set; }
-        public float Usage { get; set; }
-        public string StartDate { get; set; }
-        public string EndDate { get; set; }
+        public int Type { get; set; }
+        public float Rate { get; set; }
 
         public Utility()
         {
 
         }
 
-        public Utility(int utilityNum, int addressNum, float usage, string startDate, string endDate)
+        public Utility(int utilityNum, int type, float rate)
         {
             UtilityNum = utilityNum;
-            AddressNum = addressNum;
-            Usage = usage;
-            StartDate = startDate;
-            EndDate = endDate;
+            Type = type;
+            Rate = rate;
         }
     }
 }
