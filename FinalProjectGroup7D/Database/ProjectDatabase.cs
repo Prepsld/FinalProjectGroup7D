@@ -164,11 +164,11 @@ namespace FinalProjectGroup7D.Database
                 while (dataReader.Read())
                 {
                 Tables.History x= new Tables.History(
-                    dataReader.GetInt32(0), 
-                    dataReader.GetInt32(1), 
-                    dataReader.GetFloat(2), 
-                    dataReader.GetDateTime(3), 
-                    dataReader.GetDateTime(4));
+                    dataReader.GetInt32(0),     //UilityNum
+                    dataReader.GetInt32(1),     //Address
+                    dataReader.GetFloat(2),     //Usage
+                    dataReader.GetDateTime(3),  //StartDate
+                    dataReader.GetDateTime(4)); //EndDate
 
                     historyList.Add(x);
                 }
@@ -210,9 +210,9 @@ namespace FinalProjectGroup7D.Database
                 while (dataReader.Read())
                 {
                     Tables.Location x = new Tables.Location(
-                        dataReader.GetInt32(0),
-                        dataReader.GetInt32(1),
-                        dataReader.GetString(2));
+                        dataReader.GetInt32(0),     //AddressNum
+                        dataReader.GetInt32(1),     //Accountnum
+                        dataReader.GetString(2));   //PropertyLocation
 
                     locationList.Add(x);
                 }
@@ -254,13 +254,13 @@ namespace FinalProjectGroup7D.Database
                 while (dataReader.Read())
                 {
                     Tables.User x = new Tables.User(
-                        dataReader.GetInt32(0),
-                        dataReader.GetString(1),
-                        dataReader.GetString(2),
-                        dataReader.GetString(3),
-                        dataReader.GetString(4),
-                        dataReader.GetString(5),
-                        dataReader.GetString(6));
+                        dataReader.GetInt32(0),     //AccountNum
+                        dataReader.GetString(1),    //FirstName
+                        dataReader.GetString(2),    //LastName
+                        dataReader.GetString(3),    //MailingAddress
+                        dataReader.GetString(4),    //PhoneNumber
+                        dataReader.GetString(5),    //Email
+                        dataReader.GetString(6));   //CreditCard
 
                     userList.Add(x);
                 }
@@ -302,9 +302,9 @@ namespace FinalProjectGroup7D.Database
                 while (dataReader.Read())
                 {
                     Tables.Utility x = new Tables.Utility(
-                        dataReader.GetInt32(0),
-                        dataReader.GetString(1),
-                        dataReader.GetFloat(2));
+                        dataReader.GetInt32(0),     //UtilityNum
+                        dataReader.GetString(1),    //Type
+                        dataReader.GetFloat(2));    //Rate
 
                     utilityList.Add(x);
                 }
