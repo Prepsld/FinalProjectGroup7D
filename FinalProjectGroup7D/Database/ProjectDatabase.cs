@@ -165,8 +165,8 @@ namespace FinalProjectGroup7D.Database
                     dataReader.GetInt32(0), 
                     dataReader.GetInt32(1), 
                     dataReader.GetFloat(2), 
-                    dataReader.GetString(3), 
-                    dataReader.GetString(4));
+                    dataReader.GetDateTime(3), 
+                    dataReader.GetDateTime(4));
 
                     historyList.Add(x);
                 }
