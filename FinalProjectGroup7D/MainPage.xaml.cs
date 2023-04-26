@@ -1,44 +1,36 @@
-﻿using Microsoft.Maui.Controls;
+using FinalProjectGroup7D.Database;
+using FinalProjectGroup7D.Tables;
+using Microsoft.Maui.Controls;
 using MySqlConnector;
+
+//Create by Markus Luthi
+//On April 25th, 2023
+//For OOP2 Final Project
 
 namespace FinalProjectGroup7D;
 
 public partial class MainPage : ContentPage
+
+
 {
-	public MainPage()
+    public List<User> Users = new List<User>();
+    public List<Utility> Utilities = new List<Utility>();
+
+    public MainPage()
     {
         InitializeComponent();
+        
+        ProjectDatabase userdataBase = new ProjectDatabase();
 
-        string connectionString = "Server=localhost;Uid=root;Pwd=password;Database=oopfinal;";
+        Users = userdataBase.SelectUser();
 
-        // connection is created and is properly garbage collected when the connection is closed
-        using (MySqlConnection connection = new MySqlConnection(connectionString))
-        {
-            connection.Open();
+        UserList.ItemsSource = Users;
 
-            // hardcoded MariaDB compatible SQL query
-            string query = "SELECT * FROM user;";
-            using (MySqlCommand command = new MySqlCommand(query, connection))
-            {
-                // retrieves data from the database by executing the query with the proper connection details
-                using (MySqlDataReader reader = command.ExecuteReader())
-                {
-                    // if there is data to be read with the results from command.ExecuteReader()
-                    // parses and sets corresponding variables from the rows of data retrieved from command.ExecuteReader()
-                    while (reader.Read())
-                    {
-                        string firstName = reader.GetString("first_name");
-                        string lastName = reader.GetString("last_name");
-                        string email = reader.GetString("e_mail");
 
-                        firstNameLabel.Text = firstName;
-                        lastNameLabel.Text = lastName;
-                        emailLabel.Text = email;
-                    }
-                }
-            }
-            connection.Close();
-        }
+        ProjectDatabase utilitiesDataBase = new ProjectDatabase();
+
+        Utilities = utilitiesDataBase.SelectUtility();
+
+        UtilityInfo.ItemsSource= Utilities;
     }
 }
-

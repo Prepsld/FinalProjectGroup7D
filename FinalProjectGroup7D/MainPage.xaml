@@ -1,27 +1,196 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!--Create by Markus Luthi
+On April 25th, 2023
+For OOP2 Final Project-->
+    
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FinalProjectGroup7D.MainPage">
+             x:Class="FinalProjectGroup7D.MainPage"
+             BackgroundColor = "DeepSkyBlue">
 
-    <Grid ColumnSpacing="10" RowSpacing="5">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
 
-        <!-- I have no idea how to properly space the grid -->
-        <Label Text="Column 2" Grid.Row="4" Grid.Column="1" />
+    <Grid>
+        <ListView ItemsSource="{Binding History}" x:Name="UserList">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid BackgroundColor="DarkRed"  VerticalOptions="Fill" ColumnSpacing="10" RowSpacing="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="250" />
+                                <ColumnDefinition Width="310" />
 
-        <!-- x:Name="firstNameLabel" is what enables C# and XAML to display data into the proper text field -->
-        <Label Grid.Column="0" x:Name="firstNameLabel"></Label>
-        <Label Grid.Column="1" x:Name="lastNameLabel"></Label>
-        <Label Grid.Column="2" x:Name="emailLabel"></Label>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="90" />
+                                <RowDefinition Height="90" />
+                                <RowDefinition Height="90" />
+                                <RowDefinition Height="90" />
+                                <RowDefinition Height="90" />
+                                <RowDefinition Height="90" />
+                                <RowDefinition Height="80" />
+                            </Grid.RowDefinitions>
+
+                            <Label 
+                                HorizontalOptions="End"
+                                Grid.Column="0" 
+                                Grid.Row="0" 
+                                Text="Account Number:"
+                                FontSize="24">
+                            </Label>
+                            <Label 
+                                HorizontalOptions="Start"
+                                Grid.Column="1" 
+                                Grid.Row="0" 
+                                Text="{Binding AccountNum}" 
+                                FontSize="24">
+                            </Label>
+
+                            <Label 
+                                HorizontalOptions="End"
+                                Grid.Column="0" 
+                                Grid.Row="1" 
+                                Text="First Name:" 
+                                FontSize="24">
+                            </Label>
+                            <Label 
+                                HorizontalOptions="Start"
+                                Grid.Column="1" 
+                                Grid.Row="1" 
+                                Text="{Binding FirstName}" 
+                                FontSize="24">
+                            </Label>
+
+                            <Label 
+                                HorizontalOptions="End"
+                                Grid.Column="0" 
+                                Grid.Row="2" 
+                                Text="Last Name:" 
+                                FontSize="24">
+                            </Label>
+                            <Label 
+                                HorizontalOptions="Start"
+                                Grid.Column="1" 
+                                Grid.Row="2" 
+                                Text="{Binding LastName}" 
+                                FontSize="24">
+                            </Label>
+
+                            <Label 
+                                HorizontalOptions="End"
+                                Grid.Column="0" 
+                                Grid.Row="3" 
+                                Text="Mailing Address:" 
+                                FontSize="24">
+                            </Label>
+                            <Label 
+                                HorizontalOptions="Start"
+                                Grid.Column="1" 
+                                Grid.Row="3" 
+                                Text="{Binding MailingAddress}" 
+                                FontSize="24">
+                            </Label>
+
+                            <Label 
+                                HorizontalOptions="End"
+                                Grid.Column="0" 
+                                Grid.Row="4" 
+                                Text="Email Address:" 
+                                FontSize="24">
+                            </Label>
+                            <Label 
+                                HorizontalOptions="Start"
+                                Grid.Column="1" 
+                                Grid.Row="4" 
+                                Text="{Binding Email}" 
+                                FontSize="24">
+                            </Label>
+
+                            <Label 
+                                HorizontalOptions="End"
+                                Grid.Column="0" 
+                                Grid.Row="5" 
+                                Text="Phone Number:" 
+                                FontSize="24">
+                            </Label>
+                            <Label 
+                                HorizontalOptions="Start"
+                                Grid.Column="1" 
+                                Grid.Row="5" 
+                                Text="{Binding PhoneNum}" 
+                                FontSize="24">
+                            </Label>
+
+                            <Label 
+                                HorizontalOptions="End"
+                                Grid.Column="0" 
+                                Grid.Row="6" 
+                                Text="Credit Card Number:" 
+                                FontSize="24">
+                            </Label>
+                            <Label 
+                                HorizontalOptions="Start"
+                                Grid.Column="1" 
+                                Grid.Row="6" 
+                                Text="{Binding CreditCard}" 
+                                FontSize="24">
+                            </Label>
+
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <ListView
+            Grid.Column="0"
+            Grid.Row="0"
+            x:Name="UtilityInfo"
+            SelectionMode="Single"> 
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid 
+                            ColumnSpacing="5" 
+                            RowSpacing="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="600" />
+                                <ColumnDefinition Width="50" />
+                                <ColumnDefinition Width="50" />
+                                <ColumnDefinition Width="400" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="10" />
+                                <RowDefinition Height="90" />
+                            </Grid.RowDefinitions>
+                            <Label 
+                                HorizontalOptions="End"
+                                Grid.Column="1" 
+                                Grid.Row="1" 
+                                Text="{Binding UtilityNum}"
+                                FontSize="24">
+                            </Label>
+
+                            <Label 
+                                HorizontalOptions="End"
+                                Grid.Column="2" 
+                                Grid.Row="1" 
+                                Text="{Binding Type}"
+                                FontSize="24">
+                            </Label>
+
+                            <Label 
+                                HorizontalOptions="End"
+                                Grid.Column="3" 
+                                Grid.Row="1" 
+                                Text="{Binding Rate}"
+                                FontSize="24">
+                            </Label>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
     </Grid>
 </ContentPage>
