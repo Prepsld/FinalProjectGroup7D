@@ -17,7 +17,7 @@ public partial class MainPage : ContentPage
             connection.Open();
 
             // hardcoded MariaDB compatible SQL query
-            string query = "SELECT * FROM user LIMIT 1;";
+            string query = "SELECT * FROM user;";
             using (MySqlCommand command = new MySqlCommand(query, connection))
             {
                 // retrieves data from the database by executing the query with the proper connection details
@@ -25,7 +25,7 @@ public partial class MainPage : ContentPage
                 {
                     // if there is data to be read with the results from command.ExecuteReader()
                     // parses and sets corresponding variables from the rows of data retrieved from command.ExecuteReader()
-                    if (reader.Read())
+                    while (reader.Read())
                     {
                         string firstName = reader.GetString("first_name");
                         string lastName = reader.GetString("last_name");
