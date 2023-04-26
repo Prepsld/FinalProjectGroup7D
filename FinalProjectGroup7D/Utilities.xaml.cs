@@ -1,4 +1,3 @@
-//using CloudKit;
 using FinalProjectGroup7D.Database;
 using FinalProjectGroup7D.Tables;
 using Microsoft.Maui.Controls;
