@@ -1,39 +1,32 @@
-//using CloudKit;
-using FinalProjectGroup7D.Resources.Database;
+using FinalProjectGroup7D.Database;
+using FinalProjectGroup7D.Tables;
 using Microsoft.Maui.Controls;
 using MySqlConnector;
 using System.Collections.ObjectModel;
 using System.Data;
 
+//Created by Dave Prepsl, Jin Her, Markus Luthi
+//On April 22th, 2023
+//For OOP2 Final Project
+
 namespace FinalProjectGroup7D;
 
 public partial class Utilities : ContentPage
+
+
 {
-    public ObservableCollection<string> tableList = new ObservableCollection<string>();
-	public Utilities()
-	{
-		InitializeComponent();
+    //Creates a list That holds Utility Information
+    public List<Utility> Util = new List<Utility>();
 
-        //string connectionString = "Server=localhost;Uid=username;Pwd=password;Database=oopfinal;";
+    public Utilities()
+    {
+        InitializeComponent();
 
-        string server = "localhost";
-        string database = "oopfinal";
-        string uid = "root";
-        string password = "password";
-        string connectionString;
-        connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-        database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
+        //Populates the Utility List
+        ProjectDatabase dataBase = new ProjectDatabase();
+        Util = dataBase.SelectUtility();
 
-        MySqlConnection connection = new MySqlConnection(connectionString);
-		connection.Open();
-        string query = "SHOW TABLES;";
-        MySqlCommand command = new MySqlCommand(query, connection);
-        MySqlDataReader reader = command.ExecuteReader();
-        while (reader.Read())
-        {
-            tableList.Add(reader.GetString(0));
-        }
-        tableListView.ItemsSource = tableList;
-        connection.Close();
+        //Passes that information to the UtilityInfo.ItemSource to be used in the XAML file
+        UtilitiesList.ItemsSource = Util;
     }
 }

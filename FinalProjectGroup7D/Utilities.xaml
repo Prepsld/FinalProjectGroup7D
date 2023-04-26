@@ -1,15 +1,73 @@
 <?xml version="1.0" encoding="utf-8" ?>
+
+<!--Created by Dave Prepsl, Jin Her, Markus Luthi
+On April 22th, 2023
+For OOP2 Final Project-->
+    
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FinalProjectGroup7D.Utilities"
              Title="Utilities"
-             BackgroundColor="DeepSkyBlue">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <ListView x:Name="tableListView" />
-    </VerticalStackLayout>
-    
+             BackgroundColor = "DeepSkyBlue">
+
+    <Grid HorizontalOptions="Center">
+
+        <CollectionView
+            Grid.Row="1"
+            x:Name="UtilitiesList"
+            SelectionMode="Single">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Grid Padding="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition  Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80" />
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="50" />
+                    </Grid.ColumnDefinitions>
+        <!--Utility Number-->
+                    <Label HorizontalOptions="Center"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="Utility#"
+                        FontAttributes="Bold" />
+                    <Label HorizontalOptions="Center"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="{Binding UtilityNum}"
+                        FontAttributes="Bold" />
+        <!--Utility type-->
+                    <Label HorizontalOptions="Center"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text="Type"
+                        FontAttributes="Bold" />
+                    <Label HorizontalOptions="Center"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Text="{Binding Type}"
+                        FontAttributes="Italic"
+                        VerticalOptions="End" />
+        <!--Utility Rate-->
+                    <Label HorizontalOptions="Center"
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Text="Rate#"
+                        FontAttributes="Bold" />
+                    <Label HorizontalOptions="Center"
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Text="{Binding Rate}"
+                        FontAttributes="Italic"
+                        VerticalOptions="End" />
+                </Grid>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+
 </ContentPage>

@@ -1,44 +1,46 @@
-﻿using Microsoft.Maui.Controls;
+using FinalProjectGroup7D.Database;
+using FinalProjectGroup7D.Tables;
+using Microsoft.Maui.Controls;
 using MySqlConnector;
+
+//Created by Dave Prepsl, Jin Her, Markus Luthi
+//On April 22th, 2023
+//For OOP2 Final Project
+//Creates lists and Itemsources for the MainPage.XAML file
 
 namespace FinalProjectGroup7D;
 
 public partial class MainPage : ContentPage
+
+
 {
-	public MainPage()
+    //Creates a list That holds User Information
+    public List<User> Users = new List<User>();
+
+    //Creates a list that holds Utility Information
+    public List<Utility> Utilities = new List<Utility>();
+
+    public MainPage()
     {
         InitializeComponent();
 
-        string connectionString = "Server=localhost;Uid=root;Pwd=password;Database=oopfinal;";
+        //USERS
 
-        // connection is created and is properly garbage collected when the connection is closed
-        using (MySqlConnection connection = new MySqlConnection(connectionString))
-        {
-            connection.Open();
+        //Populates the User List
+        ProjectDatabase userdataBase = new ProjectDatabase();
+        Users = userdataBase.SelectUser();
 
-            // hardcoded MariaDB compatible SQL query
-            string query = "SELECT * FROM user LIMIT 1;";
-            using (MySqlCommand command = new MySqlCommand(query, connection))
-            {
-                // retrieves data from the database by executing the query with the proper connection details
-                using (MySqlDataReader reader = command.ExecuteReader())
-                {
-                    // if there is data to be read with the results from command.ExecuteReader()
-                    // parses and sets corresponding variables from the rows of data retrieved from command.ExecuteReader()
-                    if (reader.Read())
-                    {
-                        string firstName = reader.GetString("first_name");
-                        string lastName = reader.GetString("last_name");
-                        string email = reader.GetString("e_mail");
+        //Passes that information to the UserList.ItemSource to be used in the XAML file
+        UserList.ItemsSource = Users;
 
-                        firstNameLabel.Text = firstName;
-                        lastNameLabel.Text = lastName;
-                        emailLabel.Text = email;
-                    }
-                }
-            }
-            connection.Close();
-        }
+
+        //UTILITY
+
+        //Populates the Utility List
+        ProjectDatabase utilitiesDataBase = new ProjectDatabase();
+        Utilities = utilitiesDataBase.SelectUtility();
+
+        //Passes that information to the UtilityInfo.ItemSource to be used in the XAML file
+        UtilityInfo.ItemsSource= Utilities;
     }
 }
-
