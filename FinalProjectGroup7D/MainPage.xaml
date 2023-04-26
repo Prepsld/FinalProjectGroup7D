@@ -3,30 +3,112 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FinalProjectGroup7D.MainPage">
 
-    <Grid ColumnSpacing="10" RowSpacing="5">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200" />
-            <ColumnDefinition Width="200" />
-            <ColumnDefinition Width="400" />
-            <ColumnDefinition Width="500" />
 
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
-        </Grid.RowDefinitions>
+    <Grid HorizontalOptions="StartAndExpand">
 
-        <!-- x:Name="firstNameLabel" is what enables C# and XAML to display data into the proper text field -->
-        
-        <Label Grid.Column="1" Grid.Row="1" Text="First Name:" FontSize="36" ></Label>
-        <Label Grid.Column="1" Grid.Row="2" x:Name="firstNameLabel" FontSize="36" ></Label>
-        <Label Grid.Column="2" Grid.Row="1" Text="Last Name:" FontSize="36" ></Label>
-        <Label Grid.Column="2" Grid.Row="2" x:Name="lastNameLabel" FontSize="36"></Label>
-        <Label Grid.Column="3" Grid.Row="1" Text="Email Address:" FontSize="36" ></Label>
-        <Label Grid.Column="3" Grid.Row="2" x:Name="emailLabel" FontSize="36"></Label>
-        <Label Grid.Column="3" Grid.Row="2" x:Name="usageLabel" FontSize="36"></Label>
-        
+        <CollectionView
+            Grid.Row="1"
+            x:Name="UserList"
+            SelectionMode="Single">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnSpacing="10" RowSpacing="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150" />
+                            <ColumnDefinition Width="200" />
+
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20" />
+                            <RowDefinition Height="20" />
+                            <RowDefinition Height="20" />
+                            <RowDefinition Height="20" />
+                            <RowDefinition Height="20" />
+                            <RowDefinition Height="20" />
+                            <RowDefinition Height="20" />
+                        </Grid.RowDefinitions>
+
+                        <Label HorizontalOptions="End"
+                            Grid.Column="0" 
+                            Grid.Row="0" 
+                            Text="Account Number" >
+                        </Label>
+                        <Label HorizontalOptions="Start"
+                            Grid.Column="1" 
+                            Grid.Row="0" 
+                            Text="{Binding AccountNum}" >
+                        </Label>
+
+                        <Label HorizontalOptions="End"
+                            Grid.Column="0" 
+                            Grid.Row="1" 
+                            Text="First Name:" >
+                        </Label>
+                        <Label HorizontalOptions="Start"
+                            Grid.Column="1" 
+                            Grid.Row="1" 
+                            Text="{Binding FirstName}" >
+                        </Label>
+
+                        <Label HorizontalOptions="End"
+                            Grid.Column="0" 
+                            Grid.Row="2" 
+                            Text="Last Name:" >
+                        </Label>
+                        <Label HorizontalOptions="Start"
+                            Grid.Column="1" 
+                            Grid.Row="2" 
+                            Text="{Binding LastName}" >
+                        </Label>
+
+                        <Label HorizontalOptions="End"
+                            Grid.Column="0" 
+                            Grid.Row="3" 
+                            Text="Mailing Address:" >
+                        </Label>
+                        <Label HorizontalOptions="Start"
+                            Grid.Column="1" 
+                            Grid.Row="3" 
+                            Text="{Binding MailingAddress}" >
+                        </Label>
+
+                        <Label HorizontalOptions="End"
+                            Grid.Column="0" 
+                            Grid.Row="4" 
+                            Text="Email Address:" >
+                        </Label>
+                        <Label HorizontalOptions="Start"
+                            Grid.Column="1" 
+                            Grid.Row="4" 
+                            Text="{Binding Email}" >
+                        </Label>
+
+                        <Label HorizontalOptions="End"
+                            Grid.Column="0" 
+                            Grid.Row="5" 
+                            Text="Phone Number:" >
+                        </Label>
+                        <Label HorizontalOptions="Start"
+                            Grid.Column="1" 
+                            Grid.Row="5" 
+                            Text="{Binding PhoneNum}" >
+                        </Label>
+
+                        <Label HorizontalOptions="End"
+                            Grid.Column="0" 
+                            Grid.Row="6" 
+                            Text="Credit Card Number:" >
+                        </Label>
+                        <Label HorizontalOptions="Start"
+                            Grid.Column="1" 
+                            Grid.Row="6" 
+                            Text="{Binding CreditCard}" >
+                        </Label>
+                        
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
     </Grid>
 </ContentPage>
