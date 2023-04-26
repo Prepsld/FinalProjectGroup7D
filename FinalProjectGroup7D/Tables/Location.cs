@@ -13,7 +13,7 @@ namespace FinalProjectGroup7D.Tables
     public class Location
     {
         public int AddressNum { get; set; }
-        public int Accountnum { get; set; }
+        public int AccountNum { get; set; }
         public string PropertyLocation { get; set; }
 
         public Location()
@@ -24,7 +24,7 @@ namespace FinalProjectGroup7D.Tables
         public Location(int addressNum, int accountnum, string propertyLocation)
         {
             AddressNum = addressNum;
-            Accountnum = accountnum;
+            AccountNum = accountnum;
             PropertyLocation = propertyLocation;
         }
     }
