@@ -1,4 +1,4 @@
-﻿using FinalProjectGroup7D.Database;
+using FinalProjectGroup7D.Database;
 using FinalProjectGroup7D.Tables;
 using Microsoft.Maui.Controls;
 using MySqlConnector;
@@ -19,7 +19,7 @@ public partial class MainPage : ContentPage
     public MainPage()
     {
         InitializeComponent();
-
+        
         ProjectDatabase userdataBase = new ProjectDatabase();
 
         Users = userdataBase.SelectUser();

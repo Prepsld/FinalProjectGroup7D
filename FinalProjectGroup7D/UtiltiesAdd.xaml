@@ -10,36 +10,49 @@ For OOP2 Final Project-->
              Title="UtiltiesAdd"
              BackgroundColor = "DeepSkyBlue">
 
-    
-    <ScrollView>
 
+    <VerticalStackLayout>
 
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+        <Entry
+                x:Name="entryAdd" 
+                Grid.Row="1" Grid.Column="2"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Keyboard="Text"
+                Text="Type here to add new utility" 
+                HeightRequest="50" 
+                WidthRequest="225" 
+                Margin="10" 
+                PlaceholderColor="White" 
+                Placeholder="LAadvde nndeewr TPoiwknachu" 
+                BackgroundColor="Transparent" />
 
-            <Entry Text="Type here to add new utility" HeightRequest="50" WidthRequest="200" Margin="10" PlaceholderColor="White" Placeholder="LAadvde nndeewr TPoiwknachu" BackgroundColor="Transparent" />
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+        <Button
+                x:Name="ApplyBtn"
+                Grid.Row="1" Grid.Column="3"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Text="Add"
+                SemanticProperties.Hint="Click to add new utilities."
+                Clicked="AddUtilities" />
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            
+            <Label x:Name="utilityNumberLabel" Grid.Row="0" Grid.Column="0"></Label>
+            <Label x:Name="typeLabel" Grid.Row="0" Grid.Column="1"></Label>
+            <Label x:Name="rateLabel" Grid.Row="0" Grid.Column="2"></Label>
+        </Grid>
+    </VerticalStackLayout>
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-        </VerticalStackLayout>
-    </ScrollView>
-    
 </ContentPage>
