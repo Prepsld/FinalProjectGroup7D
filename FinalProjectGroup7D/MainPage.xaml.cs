@@ -14,15 +14,23 @@ public partial class MainPage : ContentPage
 
 {
     public List<User> Users = new List<User>();
+    public List<Utility> Utilities = new List<Utility>();
 
     public MainPage()
     {
         InitializeComponent();
 
-        ProjectDatabase dataBase = new ProjectDatabase();
+        ProjectDatabase userdataBase = new ProjectDatabase();
 
-        Users = dataBase.SelectUser();
+        Users = userdataBase.SelectUser();
 
         UserList.ItemsSource = Users;
+
+
+        ProjectDatabase utilitiesDataBase = new ProjectDatabase();
+
+        Utilities = utilitiesDataBase.SelectUtility();
+
+        UtilityInfo.ItemsSource= Utilities;
     }
 }
