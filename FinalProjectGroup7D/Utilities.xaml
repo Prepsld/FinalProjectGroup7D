@@ -2,7 +2,8 @@
 
 <!--Create by Markus Luthi
 On April 25th, 2023
-For OOP2 Final Project-->
+For OOP2 Final Project
+This file is used for the display options for the Utilities Page-->
     
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -29,6 +30,7 @@ For OOP2 Final Project-->
                         <ColumnDefinition Width="50" />
                         <ColumnDefinition Width="50" />
                     </Grid.ColumnDefinitions>
+        <!--Utility Number-->
                     <Label HorizontalOptions="Center"
                         Grid.Row="0"
                         Grid.Column="0"
@@ -39,7 +41,7 @@ For OOP2 Final Project-->
                         Grid.Column="0"
                         Text="{Binding UtilityNum}"
                         FontAttributes="Bold" />
-                    
+        <!--Utility type-->
                     <Label HorizontalOptions="Center"
                         Grid.Row="0"
                         Grid.Column="1"
@@ -51,7 +53,7 @@ For OOP2 Final Project-->
                         Text="{Binding Type}"
                         FontAttributes="Italic"
                         VerticalOptions="End" />
-                    
+        <!--Utility Rate-->
                     <Label HorizontalOptions="Center"
                         Grid.Row="0"
                         Grid.Column="2"

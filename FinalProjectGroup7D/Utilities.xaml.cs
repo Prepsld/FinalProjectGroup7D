@@ -15,16 +15,18 @@ public partial class Utilities : ContentPage
 
 
 {
+    //Creates a list That holds Utility Information
     public List<Utility> Util = new List<Utility>();
 
     public Utilities()
     {
         InitializeComponent();
 
+        //Populates the Utility List
         ProjectDatabase dataBase = new ProjectDatabase();
-
         Util = dataBase.SelectUtility();
 
+        //Passes that information to the UtilityInfo.ItemSource to be used in the XAML file
         UtilitiesList.ItemsSource = Util;
     }
 }

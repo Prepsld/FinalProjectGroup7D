@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 //On April 25th, 2023
 //For OOP2 Final Project
 //Creates a connection to the database, and calls the 4 select statements that we need to pull information from our tables.
+//
 
 namespace FinalProjectGroup7D.Database
 {
@@ -85,62 +86,62 @@ namespace FinalProjectGroup7D.Database
             }
         }
 
-        //Insert statement
-        public void Insert()
-        {
-            string query = "INSERT INTO tableinfo (name, age) VALUES('John Smith', '33')";
+        //Uncomment if you want to use the Insert() Method
+        //public void Insert()
+        //{
+        //    string query = "INSERT INTO tableinfo (name, age) VALUES('John Smith', '33')";
 
-            //open connection
-            if (OpenConnection() == true)
-            {
-                //create command and assign the query and connection from the constructor
-                MySqlCommand cmd = new MySqlCommand(query, connection);
+        //    //open connection
+        //    if (OpenConnection() == true)
+        //    {
+        //        //create command and assign the query and connection from the constructor
+        //        MySqlCommand cmd = new MySqlCommand(query, connection);
 
-                //Execute command
-                cmd.ExecuteNonQuery();
+        //        //Execute command
+        //        cmd.ExecuteNonQuery();
 
-                //close connection
-                CloseConnection();
-            }
-        }
+        //        //close connection
+        //        CloseConnection();
+        //    }
+        //}
 
-        ////Update statement
-        public void Update()
-        {
-            string query = "UPDATE tableinfo SET name='Joe', age='22' WHERE name='John Smith'";
+        //Uncomment if you want to use the Update() Method
+        //public void Update()
+        //{
+        //    string query = "UPDATE tableinfo SET name='Joe', age='22' WHERE name='John Smith'";
 
-            //Open connection
-            if (OpenConnection() == true)
-            {
-                //create mysql command
-                MySqlCommand cmd = new MySqlCommand();
-                //Assign the query using CommandText
-                cmd.CommandText = query;
-                //Assign the connection using Connection
-                cmd.Connection = connection;
+        //    //Open connection
+        //    if (OpenConnection() == true)
+        //    {
+        //        //create mysql command
+        //        MySqlCommand cmd = new MySqlCommand();
+        //        //Assign the query using CommandText
+        //        cmd.CommandText = query;
+        //        //Assign the connection using Connection
+        //        cmd.Connection = connection;
 
-                //Execute query
-                cmd.ExecuteNonQuery();
+        //        //Execute query
+        //        cmd.ExecuteNonQuery();
 
-                //close connection
-                CloseConnection();
-            }
-        }
+        //        //close connection
+        //        CloseConnection();
+        //    }
+        //}
 
-        ////Delete statement
-        public void Delete()
-        {
-            string query = "DELETE FROM tableinfo WHERE name='Joe'";
+        //Uncomment if you want to use the Delete() Method
+        //public void Delete()
+        //{
+        //    string query = "DELETE FROM tableinfo WHERE name='Joe'";
 
-            if (OpenConnection() == true)
-            {
-                MySqlCommand cmd = new MySqlCommand(query, connection);
-                cmd.ExecuteNonQuery();
-                CloseConnection();
-            }
-        }
+        //    if (OpenConnection() == true)
+        //    {
+        //        MySqlCommand cmd = new MySqlCommand(query, connection);
+        //        cmd.ExecuteNonQuery();
+        //        CloseConnection();
+        //    }
+        //}
 
-        ////Select statement
+        ////Select History statement
         public List<Tables.History> SelectHistory()
         {
             //SQL command
@@ -155,10 +156,11 @@ namespace FinalProjectGroup7D.Database
             {
                 //Create Command
                 MySqlCommand cmd = new MySqlCommand(query, connection);
+
                 //Create a data reader and Execute the command
                 MySqlDataReader dataReader = cmd.ExecuteReader();
 
-                //Read the data and store them in the list
+                //Read the data by index and store them in the list
                 while (dataReader.Read())
                 {
                 Tables.History x= new Tables.History(
@@ -200,10 +202,11 @@ namespace FinalProjectGroup7D.Database
             {
                 //Create Command
                 MySqlCommand cmd = new MySqlCommand(query, connection);
+
                 //Create a data reader and Execute the command
                 MySqlDataReader dataReader = cmd.ExecuteReader();
 
-                //Read the data and store them in the list
+                //Read the data by index and store them in the list
                 while (dataReader.Read())
                 {
                     Tables.Location x = new Tables.Location(
@@ -243,10 +246,11 @@ namespace FinalProjectGroup7D.Database
             {
                 //Create Command
                 MySqlCommand cmd = new MySqlCommand(query, connection);
+
                 //Create a data reader and Execute the command
                 MySqlDataReader dataReader = cmd.ExecuteReader();
 
-                //Read the data and store them in the list
+                //Read the data by index and store them in the list
                 while (dataReader.Read())
                 {
                     Tables.User x = new Tables.User(
@@ -290,10 +294,11 @@ namespace FinalProjectGroup7D.Database
             {
                 //Create Command
                 MySqlCommand cmd = new MySqlCommand(query, connection);
+
                 //Create a data reader and Execute the command
                 MySqlDataReader dataReader = cmd.ExecuteReader();
 
-                //Read the data and store them in the list
+                //Read the data by index and store them in the list
                 while (dataReader.Read())
                 {
                     Tables.Utility x = new Tables.Utility(
