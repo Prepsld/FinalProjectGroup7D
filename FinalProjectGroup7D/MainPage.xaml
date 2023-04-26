@@ -11,11 +11,11 @@ For OOP2 Final Project-->
 
 
     <Grid>
-        <ListView ItemsSource="{Binding History}" x:Name="UserList">
+        <ListView ItemsSource="{Binding History}" x:Name="UserList"> <!--Passes x:Name to the MainPage.Xaml for use.-->
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid BackgroundColor="DarkRed"  VerticalOptions="Fill" ColumnSpacing="10" RowSpacing="5">
+                        <Grid VerticalOptions="Fill" ColumnSpacing="10" RowSpacing="5">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="250" />
                                 <ColumnDefinition Width="310" />
@@ -30,9 +30,9 @@ For OOP2 Final Project-->
                                 <RowDefinition Height="90" />
                                 <RowDefinition Height="80" />
                             </Grid.RowDefinitions>
-
+                <!--Account Number-->
                             <Label 
-                                HorizontalOptions="End"
+                                HorizontalOptions="Start"
                                 Grid.Column="0" 
                                 Grid.Row="0" 
                                 Text="Account Number:"
@@ -45,9 +45,9 @@ For OOP2 Final Project-->
                                 Text="{Binding AccountNum}" 
                                 FontSize="24">
                             </Label>
-
+                <!--User First Name-->
                             <Label 
-                                HorizontalOptions="End"
+                                HorizontalOptions="Start"
                                 Grid.Column="0" 
                                 Grid.Row="1" 
                                 Text="First Name:" 
@@ -60,9 +60,9 @@ For OOP2 Final Project-->
                                 Text="{Binding FirstName}" 
                                 FontSize="24">
                             </Label>
-
+                <!--User Last Name-->
                             <Label 
-                                HorizontalOptions="End"
+                                HorizontalOptions="Start"
                                 Grid.Column="0" 
                                 Grid.Row="2" 
                                 Text="Last Name:" 
@@ -75,9 +75,9 @@ For OOP2 Final Project-->
                                 Text="{Binding LastName}" 
                                 FontSize="24">
                             </Label>
-
+                <!--User Mailing Address-->
                             <Label 
-                                HorizontalOptions="End"
+                                HorizontalOptions="Start"
                                 Grid.Column="0" 
                                 Grid.Row="3" 
                                 Text="Mailing Address:" 
@@ -90,9 +90,9 @@ For OOP2 Final Project-->
                                 Text="{Binding MailingAddress}" 
                                 FontSize="24">
                             </Label>
-
+                <!--User Email Address-->
                             <Label 
-                                HorizontalOptions="End"
+                                HorizontalOptions="Start"
                                 Grid.Column="0" 
                                 Grid.Row="4" 
                                 Text="Email Address:" 
@@ -105,9 +105,9 @@ For OOP2 Final Project-->
                                 Text="{Binding Email}" 
                                 FontSize="24">
                             </Label>
-
+                <!--User Phone number-->
                             <Label 
-                                HorizontalOptions="End"
+                                HorizontalOptions="Start"
                                 Grid.Column="0" 
                                 Grid.Row="5" 
                                 Text="Phone Number:" 
@@ -120,9 +120,9 @@ For OOP2 Final Project-->
                                 Text="{Binding PhoneNum}" 
                                 FontSize="24">
                             </Label>
-
+                <!--User Credit Card Number-->
                             <Label 
-                                HorizontalOptions="End"
+                                HorizontalOptions="Start"
                                 Grid.Column="0" 
                                 Grid.Row="6" 
                                 Text="Credit Card Number:" 
@@ -156,13 +156,14 @@ For OOP2 Final Project-->
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="600" />
                                 <ColumnDefinition Width="50" />
-                                <ColumnDefinition Width="50" />
-                                <ColumnDefinition Width="400" />
+                                <ColumnDefinition Width="150" />
+                                <ColumnDefinition Width="100" />
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="10" />
                                 <RowDefinition Height="90" />
                             </Grid.RowDefinitions>
+                <!--Utility Number-->
                             <Label 
                                 HorizontalOptions="End"
                                 Grid.Column="1" 
@@ -170,7 +171,7 @@ For OOP2 Final Project-->
                                 Text="{Binding UtilityNum}"
                                 FontSize="24">
                             </Label>
-
+                <!--Utility Type-->
                             <Label 
                                 HorizontalOptions="End"
                                 Grid.Column="2" 
@@ -178,7 +179,7 @@ For OOP2 Final Project-->
                                 Text="{Binding Type}"
                                 FontSize="24">
                             </Label>
-
+                <!--Utility Rate-->
                             <Label 
                                 HorizontalOptions="End"
                                 Grid.Column="3" 

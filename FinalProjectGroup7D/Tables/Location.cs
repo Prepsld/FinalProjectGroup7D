@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 //Create by Markus Luthi
 //On April 25th, 2023
 //For OOP2 Final Project
+//Used to get and set the properties for the Location class
 
 namespace FinalProjectGroup7D.Tables
 {
