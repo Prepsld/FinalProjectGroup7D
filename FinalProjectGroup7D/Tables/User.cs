@@ -37,7 +37,5 @@ namespace FinalProjectGroup7D.Tables
             CreditCard= creditCard;
 
         }
-
-
     }
 }
