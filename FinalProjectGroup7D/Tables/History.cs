@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MySqlConnector;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,20 +17,20 @@ namespace FinalProjectGroup7D.Tables
         public int UtilityNum { get; set; }
         public int AddressNum { get; set; }
         public float Usage { get; set; }
-        public string Startdate { get; set; }
-        public string Enddate { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime Enddate { get; set; }
 
         public History()
         {
 
         }
 
-        public History(int utilityNum, int addressNum, float usage, string startdate, string enddate)
+        public History(int utilityNum, int addressNum, float usage, DateTime startdate, DateTime enddate)
         {
             UtilityNum = utilityNum;
             AddressNum = addressNum;
             Usage = usage;
-            Startdate = startdate;
+            StartDate = startdate;
             Enddate = enddate;
         }
     }
