@@ -141,54 +141,55 @@ For OOP2 Final Project-->
             </ListView.ItemTemplate>
         </ListView>
 
-        <CollectionView
+        <ListView
             Grid.Column="0"
             Grid.Row="0"
             x:Name="UtilityInfo"
             SelectionMode="Single"> 
-            <CollectionView.ItemTemplate>
+            <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid 
-                        ColumnSpacing="5" 
-                        RowSpacing="5">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="600" />
-                            <ColumnDefinition Width="50" />
-                            <ColumnDefinition Width="50" />
-                            <ColumnDefinition Width="400" />
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="10" />
-                            <RowDefinition Height="90" />
-                        </Grid.RowDefinitions>
-                        <Label 
-                            HorizontalOptions="End"
-                            Grid.Column="1" 
-                            Grid.Row="1" 
-                            Text="{Binding UtilityNum}"
-                            FontSize="24">
-                        </Label>
+                    <ViewCell>
+                        <Grid 
+                            ColumnSpacing="5" 
+                            RowSpacing="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="600" />
+                                <ColumnDefinition Width="50" />
+                                <ColumnDefinition Width="50" />
+                                <ColumnDefinition Width="400" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="10" />
+                                <RowDefinition Height="90" />
+                            </Grid.RowDefinitions>
+                            <Label 
+                                HorizontalOptions="End"
+                                Grid.Column="1" 
+                                Grid.Row="1" 
+                                Text="{Binding UtilityNum}"
+                                FontSize="24">
+                            </Label>
 
-                        <Label 
-                            HorizontalOptions="End"
-                            Grid.Column="2" 
-                            Grid.Row="1" 
-                            Text="{Binding Type}"
-                            FontSize="24">
-                        </Label>
+                            <Label 
+                                HorizontalOptions="End"
+                                Grid.Column="2" 
+                                Grid.Row="1" 
+                                Text="{Binding Type}"
+                                FontSize="24">
+                            </Label>
 
-                        <Label 
-                            HorizontalOptions="End"
-                            Grid.Column="3" 
-                            Grid.Row="1" 
-                            Text="{Binding Rate}"
-                            FontSize="24">
-                        </Label>
-
-                    </Grid>
+                            <Label 
+                                HorizontalOptions="End"
+                                Grid.Column="3" 
+                                Grid.Row="1" 
+                                Text="{Binding Rate}"
+                                FontSize="24">
+                            </Label>
+                        </Grid>
+                    </ViewCell>
                 </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+            </ListView.ItemTemplate>
+        </ListView>
 
     </Grid>
 </ContentPage>
