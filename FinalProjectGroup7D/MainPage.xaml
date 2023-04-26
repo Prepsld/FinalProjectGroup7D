@@ -5,23 +5,28 @@
 
     <Grid ColumnSpacing="10" RowSpacing="5">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="400" />
+            <ColumnDefinition Width="500" />
+
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
         </Grid.RowDefinitions>
 
-        <!-- I have no idea how to properly space the grid -->
-        <Label Text="Column 2" Grid.Row="4" Grid.Column="1" />
-
         <!-- x:Name="firstNameLabel" is what enables C# and XAML to display data into the proper text field -->
-        <Label Grid.Column="0" x:Name="firstNameLabel"></Label>
-        <Label Grid.Column="1" x:Name="lastNameLabel"></Label>
-        <Label Grid.Column="2" x:Name="emailLabel"></Label>
+        
+        <Label Grid.Column="1" Grid.Row="1" Text="First Name:" FontSize="36" ></Label>
+        <Label Grid.Column="1" Grid.Row="2" x:Name="firstNameLabel" FontSize="36" ></Label>
+        <Label Grid.Column="2" Grid.Row="1" Text="Last Name:" FontSize="36" ></Label>
+        <Label Grid.Column="2" Grid.Row="2" x:Name="lastNameLabel" FontSize="36"></Label>
+        <Label Grid.Column="3" Grid.Row="1" Text="Email Address:" FontSize="36" ></Label>
+        <Label Grid.Column="3" Grid.Row="2" x:Name="emailLabel" FontSize="36"></Label>
+        <Label Grid.Column="3" Grid.Row="2" x:Name="usageLabel" FontSize="36"></Label>
+        
     </Grid>
 </ContentPage>
