@@ -10,56 +10,56 @@
             Grid.Row="1"
             x:Name="UtilitiesList"
             SelectionMode="Single">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Grid Padding="10">
-                        <Grid.RowDefinitions>
-                            <RowDefinition  Height="20" />
-                            <RowDefinition Height="20" />
-                            <RowDefinition Height="20" />
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="80" />
-                            <ColumnDefinition Width="50" />
-                            <ColumnDefinition Width="50" />
-                        </Grid.ColumnDefinitions>
-                        <Label HorizontalOptions="Center"
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Grid Padding="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition  Height="20" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="20" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80" />
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="50" />
+                    </Grid.ColumnDefinitions>
+                    <Label HorizontalOptions="Center"
                         Grid.Row="0"
                         Grid.Column="0"
                         Text="Utility#"
                         FontAttributes="Bold" />
-                        <Label HorizontalOptions="Center"
+                    <Label HorizontalOptions="Center"
                         Grid.Row="1"
                         Grid.Column="0"
                         Text="{Binding UtilityNum}"
                         FontAttributes="Bold" />
-
-                        <Label HorizontalOptions="Center"
+                    
+                    <Label HorizontalOptions="Center"
                         Grid.Row="0"
                         Grid.Column="1"
                         Text="Type"
                         FontAttributes="Bold" />
-                        <Label HorizontalOptions="Center"
+                    <Label HorizontalOptions="Center"
                         Grid.Row="1"
                         Grid.Column="1"
                         Text="{Binding Type}"
                         FontAttributes="Italic"
                         VerticalOptions="End" />
-
-                        <Label HorizontalOptions="Center"
+                    
+                    <Label HorizontalOptions="Center"
                         Grid.Row="0"
                         Grid.Column="2"
                         Text="Rate#"
                         FontAttributes="Bold" />
-                        <Label HorizontalOptions="Center"
+                    <Label HorizontalOptions="Center"
                         Grid.Row="1"
                         Grid.Column="2"
                         Text="{Binding Rate}"
                         FontAttributes="Italic"
                         VerticalOptions="End" />
-                    </Grid>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
+                </Grid>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
         </CollectionView>
     </Grid>
 
