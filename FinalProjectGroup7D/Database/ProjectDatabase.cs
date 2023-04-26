@@ -279,7 +279,7 @@ namespace FinalProjectGroup7D.Database
         public List<Tables.Utility> SelectUtility()
         {
             //SQL command
-            string query = "SELECT * FROM USER";
+            string query = "SELECT * FROM UTILITY";
 
             //Create a list to store the result
             List<Tables.Utility> utilityList = new List<Tables.Utility>();
