@@ -29,7 +29,7 @@ public partial class UtilitiesSearch : ContentPage
 
             // hardcoded MariaDB compatible SQL query
 
-            string query = entryAdd.Text;
+            string query = $"SELECT * FROM {entryAdd.Text}";
             // string query = "SELECT * FROM user;";
             using (MySqlCommand command = new MySqlCommand(query, connection))
             {
