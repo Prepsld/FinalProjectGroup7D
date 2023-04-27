@@ -3,11 +3,11 @@
 <!--Created by Dave Prepsl, Jin Her, Markus Luthi
 On April 22th, 2023
 For OOP2 Final Project-->
-    
+
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FinalProjectGroup7D.UtiltiesAdd"
-             Title="UtiltiesAdd"
+             x:Class="FinalProjectGroup7D.UtilitiesSearch"
+             Title="Search Utilities"
              BackgroundColor = "DeepSkyBlue">
 
 
@@ -19,7 +19,7 @@ For OOP2 Final Project-->
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
                 Keyboard="Text"
-                Text="Type here to add new utility" 
+                Text="Type here to search utilities" 
                 HeightRequest="50" 
                 WidthRequest="225" 
                 Margin="10" 
@@ -32,9 +32,9 @@ For OOP2 Final Project-->
                 Grid.Row="1" Grid.Column="3"
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
-                Text="Add"
-                SemanticProperties.Hint="Click to add new utilities."
-                Clicked="AddUtilities" />
+                Text="Search"
+                SemanticProperties.Hint="Click to search utilities."
+                Clicked="SearchUtilities" />
 
         <Grid>
             <Grid.ColumnDefinitions>
@@ -48,7 +48,7 @@ For OOP2 Final Project-->
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            
+
             <Label x:Name="utilityNumberLabel" Grid.Row="0" Grid.Column="0"></Label>
             <Label x:Name="typeLabel" Grid.Row="0" Grid.Column="1"></Label>
             <Label x:Name="rateLabel" Grid.Row="0" Grid.Column="2"></Label>

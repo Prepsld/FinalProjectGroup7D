@@ -56,7 +56,7 @@
 	  <MauiXaml Update="Utilities.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="UtiltiesAdd.xaml">
+	  <MauiXaml Update="UtilitiesSearch.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

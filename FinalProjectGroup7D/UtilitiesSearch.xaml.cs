@@ -8,11 +8,11 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace FinalProjectGroup7D;
 
-public partial class UtiltiesAdd : ContentPage
+public partial class UtilitiesSearch : ContentPage
 {
-	public UtiltiesAdd()
-	{
-		InitializeComponent();
+    public UtilitiesSearch()
+    {
+        InitializeComponent();
     }
 
 
@@ -57,7 +57,7 @@ public partial class UtiltiesAdd : ContentPage
 
 
 
-    public void AddUtilities(object sender, EventArgs e)
+    public void SearchUtilities(object sender, EventArgs e)
     {
         if (entryAdd != null)
         {
