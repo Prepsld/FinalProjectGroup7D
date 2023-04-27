@@ -2,7 +2,7 @@ using MySqlConnector;
 using System.Xml.Linq;
 using static System.Net.Mime.MediaTypeNames;
 
-//Created by Dave Prepsl, Jin Her, Markus Luthi
+//Created by Ben Mazerolle, Dave Prepsl, Jin Her, Markus Luthi
 //On April 22th, 2023
 //For OOP2 Final Project
 

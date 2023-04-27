@@ -6,7 +6,11 @@
     xmlns:local="clr-namespace:FinalProjectGroup7D"
     Shell.FlyoutBehavior="Disabled">
 
-    
+    <!--
+    Created by Jin Her
+    On April 22th, 2023
+    For OOP2 Final Project
+    -->
 
     <TabBar>
         <!--
