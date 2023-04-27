@@ -324,5 +324,49 @@ namespace FinalProjectGroup7D.Database
             }
         }
 
+
+        public List<Tables.OverviewList> GrabLists()
+        {
+            //SQL command
+            string query = "SELECT location, CONCAT('$', FORMAT(SUM(history.usage * utility.rate), 2)) AS total_sum FROM location JOIN history ON location.`address_#` = history.`address_#` JOIN utility ON history.`utility_#` = utility.`utility_#` GROUP BY location;";
+
+            //Create a list to store the result
+            List<Tables.OverviewList> overviewList = new List<Tables.OverviewList>();
+
+
+            //Open connection
+            if (OpenConnection() == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                //Read the data by index and store them in the list
+                while (dataReader.Read())
+                {
+                    Tables.OverviewList x = new Tables.OverviewList(
+                        dataReader.GetString(0),     // Address
+                        dataReader.GetString(1));    // Total Cost converted to dollar amount
+                    overviewList.Add(x);
+                }
+
+                //close Data Reader
+                dataReader.Close();
+
+                //close Connection
+                CloseConnection();
+
+                //return list to be displayed
+                return overviewList;
+            }
+            else
+            {
+                return overviewList;
+            }
+        }
+
+
     }
 }
