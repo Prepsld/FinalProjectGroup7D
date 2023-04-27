@@ -155,36 +155,49 @@ For OOP2 Final Project-->
                             RowSpacing="5">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="600" />
-                                <ColumnDefinition Width="50" />
                                 <ColumnDefinition Width="150" />
-                                <ColumnDefinition Width="100" />
+                                <ColumnDefinition Width="150" />
+                                <ColumnDefinition Width="150" />
+
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="10" />
-                                <RowDefinition Height="90" />
+                                <RowDefinition Height="40" />
+                                <RowDefinition Height="40" />
+                                <RowDefinition Height="40" />
                             </Grid.RowDefinitions>
-                <!--Utility Number-->
+                            <!-- Location header -->
                             <Label 
-                                HorizontalOptions="End"
                                 Grid.Column="1" 
-                                Grid.Row="1" 
-                                Text="{Binding UtilityNum}"
-                                FontSize="24">
+                                Grid.Row="0" 
+                                Text="Address:"
+                                FontSize="18"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center">
                             </Label>
-                <!--Utility Type-->
+                            <!-- Total Cost header -->
+                            <Label 
+                                Grid.Column="2" 
+                                Grid.Row="0" 
+                                Text="Total Cost:"
+                                FontSize="18"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center">
+                            </Label>
+
+                            <!--Location-->
                             <Label 
                                 HorizontalOptions="End"
                                 Grid.Column="2" 
                                 Grid.Row="1" 
-                                Text="{Binding Type}"
+                                Text="{Binding Address}"
                                 FontSize="24">
                             </Label>
-                <!--Utility Rate-->
+                <!--Total Cost-->
                             <Label 
                                 HorizontalOptions="End"
                                 Grid.Column="3" 
                                 Grid.Row="1" 
-                                Text="{Binding Rate}"
+                                Text="{Binding totalCost}"
                                 FontSize="24">
                             </Label>
                         </Grid>
