@@ -18,7 +18,7 @@ public partial class MainPage : ContentPage
     public List<User> Users = new List<User>();
 
     //Creates a list that holds Utility Information
-    public List<OverviewList> overviewLists = new List<OverviewList>();
+    public List<Utility> Utilities = new List<Utility>();
 
     public MainPage()
     {
@@ -36,11 +36,11 @@ public partial class MainPage : ContentPage
 
         //UTILITY
 
-        //Populates the overview lists
-        ProjectDatabase overviewList = new ProjectDatabase();
-        overviewLists = overviewList.GrabLists();
+        //Populates the Utility List
+        ProjectDatabase utilitiesDataBase = new ProjectDatabase();
+        Utilities = utilitiesDataBase.SelectUtility();
 
         //Passes that information to the UtilityInfo.ItemSource to be used in the XAML file
-        UtilityInfo.ItemsSource= overviewLists;
+        UtilityInfo.ItemsSource= Utilities;
     }
 }
