@@ -10,6 +10,7 @@ For OOP2 Final Project-->
              Title="Utilities"
              BackgroundColor = "DeepSkyBlue">
 
+
     <Grid HorizontalOptions="Center">
 
         <CollectionView
@@ -19,34 +20,38 @@ For OOP2 Final Project-->
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <Grid Padding="10">
-                    <Grid.RowDefinitions>
-                        <RowDefinition  Height="20" />
-                        <RowDefinition Height="20" />
-                        <RowDefinition Height="20" />
+                        <Grid.RowDefinitions>
+                        <RowDefinition Height="25" />
+                        <RowDefinition Height="25" />
+                        <RowDefinition Height="25" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="80" />
-                        <ColumnDefinition Width="50" />
-                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="100" />
                     </Grid.ColumnDefinitions>
         <!--Utility Number-->
                     <Label HorizontalOptions="Center"
+                        FontSize="18"
                         Grid.Row="0"
                         Grid.Column="0"
                         Text="Utility#"
                         FontAttributes="Bold" />
                     <Label HorizontalOptions="Center"
+                        FontSize="18"
                         Grid.Row="1"
-                        Grid.Column="0"
+                        Grid.Column="0"                      
                         Text="{Binding UtilityNum}"
                         FontAttributes="Bold" />
         <!--Utility type-->
                     <Label HorizontalOptions="Center"
+                        FontSize="18"
                         Grid.Row="0"
                         Grid.Column="1"
                         Text="Type"
                         FontAttributes="Bold" />
                     <Label HorizontalOptions="Center"
+                        FontSize="18"
                         Grid.Row="1"
                         Grid.Column="1"
                         Text="{Binding Type}"
@@ -54,11 +59,13 @@ For OOP2 Final Project-->
                         VerticalOptions="End" />
         <!--Utility Rate-->
                     <Label HorizontalOptions="Center"
+                        FontSize="18"
                         Grid.Row="0"
                         Grid.Column="2"
                         Text="Rate#"
                         FontAttributes="Bold" />
                     <Label HorizontalOptions="Center"
+                        FontSize="18"
                         Grid.Row="1"
                         Grid.Column="2"
                         Text="{Binding Rate}"
