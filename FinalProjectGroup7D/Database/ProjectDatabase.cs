@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//Create by Markus Luthi
-//On April 25th, 2023
+//Created by Dave Prepsl, Jin Her, Markus Luthi
+//On April 22th, 2023
 //For OOP2 Final Project
 //Creates a connection to the database, and calls the 4 select statements that we need to pull information from our tables.
 //
