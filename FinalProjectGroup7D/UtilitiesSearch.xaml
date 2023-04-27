@@ -1,24 +1,30 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-<!--Created by Ben Mazerolle, Dave Prepsl, Jin Her, Markus Luthi, Ben Mazerolle
+<!--Created by Dave Prepsl, Jin Her, Markus Luthi
 On April 22th, 2023
 For OOP2 Final Project-->
-    
+
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FinalProjectGroup7D.UtiltiesAdd"
-             Title="UtiltiesAdd"
+             x:Class="FinalProjectGroup7D.UtilitiesSearch"
+             Title="Search Utilities"
              BackgroundColor = "DeepSkyBlue">
 
 
     <VerticalStackLayout>
 
         <Entry
-                x:Name="entrySearch"
+                x:Name="entryAdd" 
                 Grid.Row="1" Grid.Column="2"
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
                 Keyboard="Text"
+                Text="Type here to search utilities" 
+                HeightRequest="50" 
+                WidthRequest="225" 
+                Margin="10" 
+                PlaceholderColor="White" 
+                Placeholder="LAadvde nndeewr TPoiwknachu" 
                 BackgroundColor="Transparent" />
 
         <Button
@@ -42,7 +48,7 @@ For OOP2 Final Project-->
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            
+
             <Label x:Name="utilityNumberLabel" Grid.Row="0" Grid.Column="0"></Label>
             <Label x:Name="typeLabel" Grid.Row="0" Grid.Column="1"></Label>
             <Label x:Name="rateLabel" Grid.Row="0" Grid.Column="2"></Label>
