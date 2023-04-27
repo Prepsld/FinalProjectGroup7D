@@ -2,7 +2,7 @@ using MySqlConnector;
 using System.Xml.Linq;
 using static System.Net.Mime.MediaTypeNames;
 
-//Created by Dave Prepsl, Jin Her, Markus Luthi
+//Created by Ben Mazerolle, Dave Prepsl, Jin Her, Markus Luthi
 //On April 22th, 2023
 //For OOP2 Final Project
 
@@ -29,7 +29,9 @@ public partial class UtiltiesAdd : ContentPage
 
             // hardcoded MariaDB compatible SQL query
 
-            string query = entryAdd.Text;
+            // string query = entrySearch.Text;
+            string query = $"SELECT * FROM {entrySearch.Text};";
+
             // string query = "SELECT * FROM user;";
             using (MySqlCommand command = new MySqlCommand(query, connection))
             {
@@ -38,17 +40,29 @@ public partial class UtiltiesAdd : ContentPage
                 {
                     // if there is data to be read with the results from command.ExecuteReader()
                     // parses and sets corresponding variables from the rows of data retrieved from command.ExecuteReader()
-                    while (reader.Read())
+                    if (entrySearch.Text == "utility")
                     {
+                        while (reader.Read())
+                        {
 
-                        int utilityNumber = reader.GetInt32("utility_#");
-                        string utilityname = reader.GetString("name");
-                        double utilityrate = reader.GetDouble("rate");
+                            int utilityNumber = reader.GetInt32("utility_#");
+                            string utilityname = reader.GetString("name");
+                            double utilityrate = reader.GetDouble("rate");
 
-                        utilityNumberLabel.Text += utilityNumber.ToString() + Environment.NewLine;
-                        typeLabel.Text += utilityname + Environment.NewLine;
-                        rateLabel.Text += utilityrate.ToString() + Environment.NewLine;
+                            utilityNumberLabel.Text += utilityNumber.ToString() + Environment.NewLine;
+                            typeLabel.Text += utilityname + Environment.NewLine;
+                            rateLabel.Text += utilityrate.ToString() + Environment.NewLine;
+                        }
                     }
+                    else if (entrySearch.Text == "")
+                    {
+                        while (reader.Read())
+                        {
+
+                        }
+                    }
+
+                    
                 }
             }
             connection.Close();
@@ -59,7 +73,7 @@ public partial class UtiltiesAdd : ContentPage
 
     public void SearchUtilities(object sender, EventArgs e)
     {
-        if (entryAdd != null)
+        if (entrySearch != null)
         {
             QueryDatabase();
         }

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
-<!--Created by Dave Prepsl, Jin Her, Markus Luthi
+<!--Created by Ben Mazerolle, Dave Prepsl, Jin Her, Markus Luthi
 On April 22th, 2023
 For OOP2 Final Project-->
     
@@ -22,13 +22,13 @@ For OOP2 Final Project-->
 
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="90" />
-                                <RowDefinition Height="90" />
-                                <RowDefinition Height="90" />
-                                <RowDefinition Height="90" />
-                                <RowDefinition Height="90" />
-                                <RowDefinition Height="90" />
-                                <RowDefinition Height="80" />
+                                <RowDefinition Height="85" />
+                                <RowDefinition Height="85" />
+                                <RowDefinition Height="85" />
+                                <RowDefinition Height="85" />
+                                <RowDefinition Height="85" />
+                                <RowDefinition Height="85" />
+                                <RowDefinition Height="85" />
                             </Grid.RowDefinitions>
                 <!--Account Number-->
                             <Label 
@@ -154,40 +154,39 @@ For OOP2 Final Project-->
                             ColumnSpacing="5" 
                             RowSpacing="5">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="600" />
-                                <ColumnDefinition Width="150" />
+                                <ColumnDefinition Width="850" />
+                                <ColumnDefinition Width="250" />
                                 <ColumnDefinition Width="150" />
                                 <ColumnDefinition Width="150" />
 
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="40" />
-                                <RowDefinition Height="40" />
-                                <RowDefinition Height="40" />
+                                <RowDefinition Height="75" />
+                                <RowDefinition Height="75" />
                             </Grid.RowDefinitions>
-                            <!-- Location header -->
+                <!-- Location header -->
                             <Label 
                                 Grid.Column="1" 
                                 Grid.Row="0" 
                                 Text="Address:"
                                 FontSize="18"
-                                HorizontalOptions="Center"
+                                HorizontalOptions="Start"
                                 VerticalOptions="Center">
                             </Label>
-                            <!-- Total Cost header -->
+                <!-- Total Cost header -->
                             <Label 
                                 Grid.Column="2" 
                                 Grid.Row="0" 
                                 Text="Total Cost:"
                                 FontSize="18"
-                                HorizontalOptions="Center"
+                                HorizontalOptions="Start"
                                 VerticalOptions="Center">
                             </Label>
 
-                            <!--Location-->
+                <!--Location-->
                             <Label 
-                                HorizontalOptions="End"
-                                Grid.Column="2" 
+                                Grid.Column="1" 
                                 Grid.Row="1" 
                                 Text="{Binding Address}"
                                 FontSize="24">
@@ -195,7 +194,7 @@ For OOP2 Final Project-->
                 <!--Total Cost-->
                             <Label 
                                 HorizontalOptions="End"
-                                Grid.Column="3" 
+                                Grid.Column="2" 
                                 Grid.Row="1" 
                                 Text="{Binding totalCost}"
                                 FontSize="24">

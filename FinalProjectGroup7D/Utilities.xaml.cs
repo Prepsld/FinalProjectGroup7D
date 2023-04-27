@@ -5,7 +5,7 @@ using MySqlConnector;
 using System.Collections.ObjectModel;
 using System.Data;
 
-//Created by Dave Prepsl, Jin Her, Markus Luthi
+//Created by Ben Mazerolle, Dave Prepsl, Jin Her, Markus Luthi
 //On April 22th, 2023
 //For OOP2 Final Project
 
